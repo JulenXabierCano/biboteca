@@ -1,7 +1,5 @@
 package principal;
 
-import javax.swing.*;
-
 public class Menu {
 	public static String menuPrincipal() {
 		String menu = "Menu principar:\n" + "1. Gestionar libros" + "2. Gestionar socios" + "3. Gestionar prestamos";
