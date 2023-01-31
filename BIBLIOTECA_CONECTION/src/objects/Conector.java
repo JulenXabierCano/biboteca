@@ -9,8 +9,8 @@ public class Conector {
 
 	public void conectar() {
 		try {
-			Class.forName("com.mysql.jbdc.Driver");
-			String url = "jbdc:mysql://localhost/biblioteca";
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String url = "jdbc:mysql://localhost/biblioteca";
 			cn = (Connection) DriverManager.getConnection(url, "root", "");
 		} catch (Exception e) {
 			e.printStackTrace();

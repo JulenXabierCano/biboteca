@@ -6,7 +6,7 @@ public class FormulariosDatos {
 	public static Libro insertarDatosLibro() {
 		Libro libro = new Libro();
 		libro.setAutor(JOptionPane.showInputDialog(null, "Introduzca autor del libro"));
-		libro.setTitulo(JOptionPane.showInputDialog(null, "Introduzca titulo del libro"));
+		libro.setTitulo(JOptionPane.showInputDialog(null, "Introduzca titulo del libro (no mas de 27 caracteres)"));
 		libro.setNum_pag(Integer.parseInt(JOptionPane.showInputDialog(null, "Introduzca numero de páginas del libro")));
 		return libro;
 	}
