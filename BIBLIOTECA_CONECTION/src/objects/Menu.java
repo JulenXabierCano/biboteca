@@ -17,22 +17,20 @@ public class Menu {
 
 	public static final String SALIR = "0";
 
-	public static void menuPrincipal() {
-		Visor.mostrarMensaje(
-				"Menu principar:\n" + "1. Gestionar libros\n" + "2. Gestionar socios\n" + "3. Gestionar prestamos\n");
+	public static String menuPrincipal() {
+		return "Menu principar:\n" + "1. Gestionar libros\n" + "2. Gestionar socios\n" + "3. Gestionar prestamos\n";
 	}
 
-	public static void menuLibros() {
-		Visor.mostrarMensaje("Administrar libros:\n" + "1. Insertar libro\n" + "2. Eliminar libro\n"
-				+ "3. Modificar libro\n" + "4. Mostrar libros");
+	public static String menuLibros() {
+		return "Administrar libros:\n" + "1. Insertar libro\n" + "2. Eliminar libro\n" + "3. Modificar libro\n"
+				+ "4. Mostrar libros";
 	}
 
-	public static void menuSocios() {
-		Visor.mostrarMensaje(
-				"Administrar socios\n" + "1. Ver lista de socios" + "2. Añadir socio" + "3. Eliminar socio");
+	public static String menuSocios() {
+		return "Administrar socios\n" + "1. Ver lista de socios" + "2. Añadir socio" + "3. Eliminar socio";
 	}
 
-	public static void menuPrestamos() {
-		Visor.mostrarMensaje("Administrar prestamos:\n" + "1. Crear nuevo prestamo");
+	public static String menuPrestamos() {
+		return "Administrar prestamos:\n" + "1. Crear nuevo prestamo";
 	}
 }

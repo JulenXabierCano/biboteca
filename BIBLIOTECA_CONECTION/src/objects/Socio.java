@@ -7,7 +7,7 @@ public class Socio {
 	private String direccion;
 	private String poblacion;
 	private String provincia;
-	private int dni;
+	private String dni;
 	public int getId() {
 		return id;
 	}
@@ -44,10 +44,10 @@ public class Socio {
 	public void setProcincia(String procincia) {
 		this.provincia = procincia;
 	}
-	public int getDni() {
+	public String getDni() {
 		return dni;
 	}
-	public void setDni(int dni) {
+	public void setDni(String dni) {
 		this.dni = dni;
 	}
 	

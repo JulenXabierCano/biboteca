@@ -5,9 +5,9 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Conector {
-	protected static Connection cn;
+	protected Connection cn;
 
-	public static void conectar() {
+	public void conectar() {
 		try {
 			Class.forName("com.mysql.jbdc.Driver");
 			String url = "jbdc:mysql://localhost/biblioteca";
@@ -25,12 +25,12 @@ public class Conector {
 		}
 	}
 
-	public static Connection getCn() {
+	public Connection getCn() {
 		return cn;
 	}
 
-	public static void setCn(Connection cn) {
-		Conector.cn = cn;
+	public void setCn(Connection cn) {
+		new Conector().cn = cn;
 	}
 	
 	

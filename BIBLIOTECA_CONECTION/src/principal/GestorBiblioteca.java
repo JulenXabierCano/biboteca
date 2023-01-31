@@ -1,36 +1,68 @@
 package principal;
 
+import java.sql.SQLException;
 import javax.swing.JOptionPane;
-
-import objects.Menu;
+import objects.*;
 
 public class GestorBiblioteca {
-	public void run() {
-		final String OPCION_UNO = "1";
-		final String OPCION_DOS = "2";
-		final String OPCION_TRES ="3";
-		final String SALIR = "0";
-		String opcion_menu;
+	public void run() throws SQLException {
+		GestorBBDD gestorBBDD = new GestorBBDD();
+		String opcion_menu = JOptionPane.showInputDialog(null, Menu.menuPrincipal());
 		do {
-			opcion_menu = Menu.menuPrincipal();
-			//fin menú
 			switch (opcion_menu) {
-			case :
-				JOptionPane.showMessageDialog(null, "primera opcion seleccionada");
+			case Menu.GESTIONAR_LIBROS:
+				String opcion_libros = JOptionPane.showInputDialog(null, Menu.menuLibros());
+				switch(opcion_libros) {
+				case Menu.INSERTAR_LIBRO:
+					gestorBBDD.conectar();
+					gestorBBDD.insertarLibro(FormulariosDatos.insertarDatosLibro());
+					gestorBBDD.cerrar();
+					break;
+					
+				case Menu.ELIMINAR_LIBRO:
+					gestorBBDD.conectar();
+					gestorBBDD.eliminarLibro(FormulariosDatos.insertarIdLibro());
+					gestorBBDD.cerrar();
+					break;
+					
+				case Menu.MODIFICAR_LIBRO:
+					gestorBBDD.conectar();
+					gestorBBDD.modificarLibro(FormulariosDatos.insertarIdLibro());
+					gestorBBDD.cerrar();
+					break;
+				}
 				break;
-			case OPCION_DOS:
-				JOptionPane.showMessageDialog(null, "segunda opcion seleccionada");
+				
+			case Menu.GESTIONAR_SOCIOS:
+				String opcion_socios = JOptionPane.showInputDialog(null, Menu.menuSocios());
+				switch(opcion_socios) {
+				case Menu.VER_SOCIOS:
+					gestorBBDD.conectar();
+					//TODO mostrar socios
+					gestorBBDD.cerrar();
+					break;
+
+				case Menu.AÑADIR_SOCIO:
+					gestorBBDD.conectar();
+					gestorBBDD.insertarSocio(FormulariosDatos.insertarDatosSocio());
+					gestorBBDD.cerrar();
+					break;
+					
+				case Menu.ELIMINAR_SOCIO:
+					gestorBBDD.conectar();
+					gestorBBDD.eliminarSocio(FormulariosDatos.insertarIdSocio());
+					gestorBBDD.cerrar();
+					break;
+				}
 				break;
-			case OPCION_TRES:
-				JOptionPane.showMessageDialog(null, "tercera opcion seleccionada");
-				break;
-			case SALIR:
+				
+			case Menu.SALIR:
 				JOptionPane.showMessageDialog(null, "Adios");
 				break;
 			default:
 				JOptionPane.showMessageDialog(null, "Opcion incorrecta");
 			}
-		} while (opcion_menu != SALIR);
+		} while (opcion_menu != Menu.SALIR);
 
 	}
 }
