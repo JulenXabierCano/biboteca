@@ -1,10 +1,8 @@
-package principal;
+package objects;
 
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
-
-import objects.Libro;
 
 public class Visor {
 	public static void mostrarLibros(ArrayList<Libro> libros) {

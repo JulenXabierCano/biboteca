@@ -6,7 +6,7 @@ public class Socio {
 	private String apellido;
 	private String direccion;
 	private String poblacion;
-	private String procincia;
+	private String provincia;
 	private int dni;
 	public int getId() {
 		return id;
@@ -39,10 +39,10 @@ public class Socio {
 		this.poblacion = poblacion;
 	}
 	public String getProcincia() {
-		return procincia;
+		return provincia;
 	}
 	public void setProcincia(String procincia) {
-		this.procincia = procincia;
+		this.provincia = procincia;
 	}
 	public int getDni() {
 		return dni;

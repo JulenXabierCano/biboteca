@@ -7,6 +7,7 @@ public class Préstamo {
 	private int id_socio;
 	private Date fecha;
 	private boolean devuelto;
+	
 	public int getId_libro() {
 		return id_libro;
 	}
