@@ -10,27 +10,27 @@ public class Menu {
 	public static final String ELIMINAR_LIBRO = "2";
 	public static final String MODIFICAR_LIBRO = "3";
 	public static final String MOSTRAR_LIBRO = "4";
+	public static final String MOSTRAR_LIBROS = "5";
 
 	public static final String VER_SOCIOS = "1";
-	public static final String AÑADIR_SOCIO = "2";
-	public static final String ELIMINAR_SOCIO = "3";
 
 	public static final String SALIR = "0";
+	public static final String VOLVER = "0";
 
 	public static String menuPrincipal() {
-		return "Menu principar:\n" + "1. Gestionar libros\n" + "2. Gestionar socios\n" + "3. Gestionar prestamos\n";
+		return "Menu principar:\n" + "1. Gestionar libros\n" + "2. Gestionar socios\n" + "0. Salir";
 	}
 
 	public static String menuLibros() {
 		return "Administrar libros:\n" + "1. Insertar libro\n" + "2. Eliminar libro\n" + "3. Modificar libro\n"
-				+ "4. Mostrar libros";
+				+ "4. Buscar libro\n" + "5. Mostrar todos los libros\n" + "0. Volver";
 	}
 
 	public static String menuSocios() {
-		return "Administrar socios\n" + "1. Ver lista de socios" + "2. Añadir socio" + "3. Eliminar socio";
+		return "Administrar socios\n" + "1. Ver lista de socios\n" + "0. Volver";
 	}
 
-	public static String menuPrestamos() {
-		return "Administrar prestamos:\n" + "1. Crear nuevo prestamo";
-	}
+//	public static String menuPrestamos() {
+//		return "Administrar prestamos:\n" + "1. Crear nuevo prestamo";
+//	}
 }
