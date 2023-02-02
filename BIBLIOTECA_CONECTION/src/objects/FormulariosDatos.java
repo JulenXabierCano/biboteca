@@ -1,5 +1,7 @@
 package objects;
 
+import java.sql.Date;
+
 import javax.swing.JOptionPane;
 
 public class FormulariosDatos {
@@ -27,5 +29,16 @@ public class FormulariosDatos {
 	}
 	public static int insertarIdSocio() {
 		return Integer.parseInt(JOptionPane.showInputDialog(null, "Introduzca ID de socio"));
+	}
+
+	public static String insertarFechaPrestamo() {
+		String fecha = JOptionPane.showInputDialog(null, "Introduzca fecha del prestamo");
+		return fecha;
+	}
+	
+	public static boolean libroDevuelto() {
+		boolean devuelto=true;
+		
+		return devuelto;
 	}
 }
